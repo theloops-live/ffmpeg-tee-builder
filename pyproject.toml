@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffmpeg-tee-builder"
+version = "1.0.0"
+description = "Build FFmpeg -f tee arguments for multi-destination RTMP/RTMPS streaming, so one dead or stalled server cannot stop the others."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "TheLoops", email = "support@theloops.live" }]
+keywords = ["ffmpeg", "tee", "rtmp", "rtmps", "multistream", "fifo", "live streaming"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://theloops.live/tools/ffmpeg-tee-builder"
+Source = "https://github.com/YouPanel/ffmpeg-tee-builder"
+
+[project.scripts]
+ffmpeg-tee-builder = "ffmpeg_tee_builder.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["ffmpeg: runs a real ffmpeg binary (skipped when none is on PATH)"]
