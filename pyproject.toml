@@ -21,7 +21,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://theloops.live/tools/ffmpeg-tee-builder"
-Source = "https://github.com/YouPanel/ffmpeg-tee-builder"
+Source = "https://github.com/theloops-live/ffmpeg-tee-builder"
 
 [project.scripts]
 ffmpeg-tee-builder = "ffmpeg_tee_builder.cli:main"

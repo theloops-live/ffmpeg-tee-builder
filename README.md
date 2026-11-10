@@ -48,7 +48,7 @@ a real FFmpeg.
 Python 3.9 or newer.
 
 ```bash
-pip install git+https://github.com/YouPanel/ffmpeg-tee-builder
+pip install git+https://github.com/theloops-live/ffmpeg-tee-builder
 ```
 
 ## Command line
